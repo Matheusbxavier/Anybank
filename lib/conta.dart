@@ -21,32 +21,39 @@ class Conta {
   }
 }
 
-class ContaCorrente extends Conta{
+class ContaCorrente extends Conta {
   double emprestimo = 300;
 
   ContaCorrente(super.titular, super._saldo);
 
   @override
   void enviar(double valor) {
-    if(_saldo + emprestimo >= valor) {
+    if (_saldo + emprestimo >= valor) {
       _saldo -= valor;
       imprimeSaldo();
     }
   }
-
 }
 
 class ContaPoupanca extends Conta {
   double rendimento = 0.05;
-  
+
   ContaPoupanca(super.titular, super._saldo);
 
   void calculaRendimento() {
     _saldo += _saldo * rendimento;
-
   }
 }
 
 class ContaSalario extends Conta {
-  ContaSalario(super.titular, super._saldo);
+  String cnpjEmpresa;
+  String empresa;
+
+  ContaSalario(super.titular, super._saldo, this.cnpjEmpresa, this.empresa);
+
+  @override
+  void imprimeSaldo() {
+    print(
+        "O sálario da $empresa, de CNPJ $cnpjEmpresa no valor de R\$$_saldo, foi depositado !");
+  }
 }

@@ -5,7 +5,7 @@ void main() {
   Conta contaRoberta = Conta("Roberta", 2000);
   ContaCorrente contaChris = ContaCorrente("Chris", 4000);
   ContaPoupanca contaDenize = ContaPoupanca("Denize", 4000);
-  ContaSalario contaCatarina = ContaSalario("Catarina", 2500);
+  ContaSalario contaCatarina = ContaSalario("Catarina", 2500, "00.623.904/0001-73", "CidConform");
 
   List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 
@@ -26,4 +26,5 @@ void main() {
   contaDenize.calculaRendimento();
   contaDenize.imprimeSaldo();
 
+  contaCatarina.imprimeSaldo();
 }
