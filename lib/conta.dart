@@ -51,9 +51,9 @@ class ContaSalario extends Conta {
 
   ContaSalario(super.titular, super._saldo, this.cnpjEmpresa, this.empresa);
 
-  @override
-  void imprimeSaldo() {
+  void depositar(double valor) {
+    _saldo +=valor;
     print(
-        "O sálario da $empresa, de CNPJ $cnpjEmpresa no valor de R\$$_saldo, foi depositado !");
+        "O sálario da $empresa, de CNPJ $cnpjEmpresa no valor de R\$$valor, foi depositado !");
   }
 }

@@ -27,4 +27,6 @@ void main() {
   contaDenize.imprimeSaldo();
 
   contaCatarina.imprimeSaldo();
+  contaCatarina.depositar(1000);
+  contaCatarina.imprimeSaldo();
 }
