@@ -5,6 +5,7 @@ void main() {
   Conta contaRoberta = Conta("Roberta", 2000);
   ContaCorrente contaChris = ContaCorrente("Chris", 4000);
   ContaPoupanca contaDenize = ContaPoupanca("Denize", 4000);
+  ContaSalario contaCatarina = ContaSalario("Catarina", 2500);
 
   List<Conta> contas = <Conta>[contaMatheus, contaRoberta];
 

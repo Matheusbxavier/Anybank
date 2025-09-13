@@ -46,3 +46,7 @@ class ContaPoupanca extends Conta {
 
   }
 }
+
+class ContaSalario extends Conta {
+  ContaSalario(super.titular, super._saldo);
+}
