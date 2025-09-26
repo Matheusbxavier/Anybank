@@ -1,4 +1,5 @@
-class Conta {
+//Classes abstratas não podem ser instanciadas
+abstract class Conta {
   String titular;
   double _saldo;
 
